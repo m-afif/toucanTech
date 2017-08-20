@@ -1,0 +1,62 @@
+{# app/Resources/views/layout.html.twig #}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ToucanTech members management</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+  <header id="header">
+	<span style="font-size:20px"> <span>ToucanTech - members management </span> </span>
+  </header>
+  <br>
+  
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">	
+    <div class="navbar-header">
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ path('tt_home') }}"> Members management </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul id="dropdown_hover" class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#Members" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Members <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a style = "color:black;" href="{{ path('tt_add_member_form') }}"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add a member</a></li>
+            <li><a style = "color:black;" href="{{ path('tt_search_members') }}"><span class="glyphicon glyphicon-search"></span>&nbsp;View of members</a></li>
+          </ul>
+        </li>
+		<li class="dropdown">
+          <a href="#Schools" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Schools <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a style = "color:black;" href="{{ path('tt_add_school_form') }}"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add a school</a></li>
+          </ul>
+        </li>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav> 
+<section class="col-md-12">
+<div>{% block core %} {% endblock %} </div>
+<h2 style="text-align:center;">{% block titre %}Welcome on the ToucanTech member management website {% endblock %}</h2>
+<div> {% block contenu %} {% endblock %}</div>
+</section>
+<footer>{% block footer %} {% endblock %}
+</footer>
+  {% block javascripts %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  {% endblock %}
+</body>
+</html>

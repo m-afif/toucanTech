@@ -1,0 +1,25 @@
+{% extends "TTmemberBundle:Default:index.html.twig" %}
+{%block titre%} Select a school
+{%endblock%}
+
+{% block contenu %}
+<br>
+<div style="margin-left:45%">
+    <form name = "formViewMember" class="col-md-5" action="{{ path('tt_view_members') }}" method="post">
+	<fieldset>
+        <div class="form-group">
+			<br>
+			<FORM>
+			<SELECT name="school" name="school" size="1">
+				{% for school in schools %}
+						<OPTION>{{ school.name }}
+				{% endfor %}
+				</SELECT>
+			</FORM>
+        </div>
+		<br>
+        <input type="submit" class="btn btn-primary" id="button_submit" value="Submit">
+	</fieldset>
+    </form>
+</div>
+ {% endblock %}

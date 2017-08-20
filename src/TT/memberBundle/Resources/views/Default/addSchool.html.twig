@@ -1,0 +1,22 @@
+{% extends "TTmemberBundle:Default:index.html.twig" %}
+{%block titre%} Add a new school {%endblock%}
+
+{% block contenu %}
+<br>
+<div style="margin-left:37%">
+    <form name = "formAddSchool" class="col-md-5" action="{{ path('tt_add_school') }}" method="post">
+	<fieldset>
+        <div class="form-group">
+
+            <label for="inputName">Name</label>
+
+            <input type="text" class="form-control" id="schoolName" name="schoolName" placeholder="Name">
+
+        </div>
+		<br>
+        <input type="submit" class="btn btn-primary" id="button_submit" value="Submit">
+	</fieldset>
+    </form>
+</div>
+
+{% endblock %}

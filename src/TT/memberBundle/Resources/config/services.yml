@@ -1,0 +1,4 @@
+services:
+#    t_tmember.example:
+#        class: TT\memberBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

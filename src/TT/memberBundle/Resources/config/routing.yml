@@ -1,0 +1,33 @@
+# src/TT/memberBundle/Resources/config/routing.yml
+    
+tt_home:
+    path:    /
+    defaults:    { _controller: TTmemberBundle:Default:index }
+    
+tt_add_member_form:
+    path:    /member/form
+    defaults:    { _controller: TTmemberBundle:Default:addMemberForm }
+
+tt_add_school_form:
+    path:    /school/form
+    defaults:    { _controller: TTmemberBundle:Default:addSchoolForm }
+
+tt_add_member:
+    path:    /member/add
+    defaults:    { _controller: TTmemberBundle:Default:addMember }
+
+tt_add_school:
+    path:    /school/add
+    defaults:    { _controller: TTmemberBundle:Default:addSchool }
+    
+tt_view_members:
+    path:    /member/members/
+    defaults:    { _controller: TTmemberBundle:Default:searchMembers }
+
+tt_search_members:
+    path:    /member/search/
+    defaults:    { _controller: TTmemberBundle:Default:searchMembersForm }
+
+tt_school_creation_result:
+    path:    /school/creation
+    defaults:    { _controller: TTmemberBundle:Default:creationMessageSchool }

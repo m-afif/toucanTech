@@ -1,0 +1,29 @@
+{% extends "TTmemberBundle:Default:index.html.twig" %}
+{%block titre%} Members for this school
+{%endblock%}
+
+{% block contenu %}
+<br>
+<div class="col-md-5" style="margin-left:30%">
+	<fieldset>
+        <div class="form-group">
+		<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email address</th>
+    </tr>
+  </thead>
+  <tbody>
+		{% for member in members %}
+			<tr>
+			  <td>{{ member.name }}</td>
+			  <td>{{ member.mailaddress }}</td>
+			</tr>
+		{% endfor %}
+  </tbody>
+</table>
+        </div>
+	</fieldset>
+</div>
+{% endblock %}

@@ -2,6 +2,7 @@ Information
 ========================
 
 PHP version: PHP 5.6.25
+
 Symfony version: Symfony 2.8.26
 
 Pre-requisites
